@@ -1,0 +1,33 @@
+---
+- hosts: all
+  vars_files:
+    - vars/default.config.yml
+  pre_tasks:
+    - name: Include playbook configuration
+      include_vars: "{{ item }}"
+      with_fileglob:
+        - "{{ playbook_dir }}/vars/config.yml"
+      tags:
+        - always
+
+  tasks:
+    - import_tasks: tasks/homebrew.yml
+      when: configure_homebrew
+      tags:
+        - homebrew
+    - import_tasks: tasks/mas.yml
+      when: configure_mas
+      tags:
+        - mas
+    - import_tasks: tasks/terminal.yml
+      when: configure_terminal
+      tags:
+        - terminal
+    - import_tasks: tasks/macos.yml
+      when: configure_macos
+      tags:
+        - macos
+    - import_tasks: tasks/vscode.yml
+      when: configure_vscode
+      tags:
+        - vscode

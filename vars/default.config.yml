@@ -1,0 +1,52 @@
+---
+downloads: ~/.ansible-downloads/
+
+configure_dotfiles: true
+configure_terminal: true
+configure_macos: true
+configure_homebrew: true
+# commenting out until sign-in bug is corrected
+# https://github.com/mas-cli/mas/issues/417
+configure_mas: false
+
+macos_script: "{{ playbook_dir }}/macos.sh --no-restart"
+
+homebrew_installed_packages:
+  # - ansible # Installed via Pip.
+  - bash
+  - bash-completion
+  - git
+  - ipcalc
+  - ipv6calc
+  - mas
+  - socat
+  - tmux
+  - wget
+  - xz
+  - youtube-dl
+
+homebrew_taps:
+  - homebrew/bundle
+  - homebrew/cask
+  - homebrew/cask-fonts
+  - homebrew/core
+
+homebrew_cask_appdir: /Applications
+homebrew_cask_apps:
+  - 1password
+  - 1password-cli
+  - backblaze
+  - backblaze-downloader
+  - calibre
+  - firefox
+  - font-jetbrains-mono
+  - font-overpass
+  - hazel
+  - karabiner-elements
+  - kindle
+  - qlmarkdown
+  - terminology
+  - visual-studio-code
+
+karabiner_settingsdir: "/Users/$USER/.config/karabiner"
+vscode_usersettingsdir: "/Users/$USER/Library/Application Support/Code/User"

@@ -1,0 +1,12 @@
+---
+- name: Ensure MAS is installed.
+  community.general.homebrew:
+    name: mas
+    state: present
+
+- name: Get MAS account status
+  command: mas account
+  register: mas_account_result
+  failed_when: mas_account_result.rc > 1
+  check_mode: false
+  changed_when: false

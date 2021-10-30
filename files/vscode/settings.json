@@ -1,0 +1,50 @@
+{
+  "telemetry.telemetryLevel": "off",
+  "editor.minimap.enabled": false,
+  "workbench.colorTheme": "Cobalt2",
+  "editor.fontFamily": "Overpass Mono,JetBrains Mono,Monaco, monospace",
+  "editor.fontWeight": "400",
+  "editor.fontSize": 16,
+  "window.title": "${activeEditorLong}${separator}${rootName}",
+  "editor.wordWrap": "on",
+  "files.associations": {
+      "*.txt": "markdown"
+  },
+  "git.enableSmartCommit": true,
+  "markdown.extension.toc.githubCompatibility": true,
+  "editor.tabSize": 2,
+  "terminal.integrated.profiles.osx": {
+    "bash": {
+        "path": "/opt/homebrew/bin/bash",
+        "args": [
+            "-l"
+        ],
+        "icon": "terminal-bash"
+    },
+    "zsh": {
+        "path": "zsh",
+        "args": [
+            "-l"
+        ]
+    },
+    "fish": {
+        "path": "fish",
+        "args": [
+            "-l"
+        ]
+    },
+    "tmux": {
+        "path": "/opt/homebrew/bin/tmux",
+        "icon": "terminal-tmux"
+    },
+    "pwsh": {
+        "path": "pwsh",
+        "icon": "terminal-powershell"
+    }
+  },
+  "terminal.integrated.defaultProfile.osx": "bash",
+  "terminal.integrated.fontSize": 16,
+  "security.workspace.trust.untrustedFiles": "open",
+  "git.autofetch": true,
+  "git.confirmSync": false
+}
