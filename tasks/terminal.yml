@@ -14,7 +14,7 @@
   when: "'r4y-term' not in terminal_theme.stdout"
 
 - name: Ensure custom Terminal profile is added.
-  command: open /tmp/JJG-Term.terminal
+  command: open /tmp/r4y-term.terminal
   changed_when: false
   when: "'r4y-term' not in terminal_theme.stdout"
 
