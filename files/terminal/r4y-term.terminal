@@ -150,6 +150,8 @@
 	cqIWGFhOU09iamVjdAgRGiQpMjdJTFFTV11kand+qKqssbzFzdAAAAAAAAABAQAAAAAA
 	AAAZAAAAAAAAAAAAAAAAAAAA2Q==
 	</data>
+	<key>CommandString</key>
+	<string></string>
 	<key>CursorBlink</key>
 	<false/>
 	<key>CursorColor</key>
@@ -172,6 +174,8 @@
 	</data>
 	<key>ProfileCurrentVersion</key>
 	<real>2.0699999999999998</real>
+	<key>RunCommandAsShell</key>
+	<true/>
 	<key>SelectionColor</key>
 	<data>
 	YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMS
@@ -285,9 +289,15 @@
 			<key>ProcessName</key>
 			<string>tmux</string>
 		</dict>
+		<dict>
+			<key>ProcessName</key>
+			<string>bashrc_Apple_Terminal</string>
+		</dict>
 	</array>
 	<key>rowCount</key>
 	<integer>50</integer>
+	<key>shellExitAction</key>
+	<integer>0</integer>
 	<key>type</key>
 	<string>Window Settings</string>
 	<key>warnOnShellCloseAction</key>
