@@ -44,7 +44,7 @@ pip3 install ansible --user
 9. Clone repository
 ```
 cd ~/projects/work && \
-  git clone 
+  git clone git@github.com:johnr4y/mac-setup-playbook.git
 ```
 10. Copy config.yml
 
