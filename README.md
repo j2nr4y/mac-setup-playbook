@@ -24,6 +24,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 Can be done later, originally was storing the initial BrewFile for git/mas apps
 ```
+cd ~
 ln -s "/Users/$USER/Library/Mobile Documents/com~apple~CloudDocs" iCloud
 ```
 6. Install git and mas
