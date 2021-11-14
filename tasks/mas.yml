@@ -3,10 +3,21 @@
   community.general.homebrew:
     name: mas
     state: present
+  tags:
+    - mas
 
-- name: Get MAS account status
-  command: mas account
-  register: mas_account_result
-  failed_when: mas_account_result.rc > 1
-  check_mode: false
-  changed_when: false
+# - name: Get MAS account status
+#   command: mas account
+#   register: mas_account_result
+#   failed_when: mas_account_result.rc > 1
+#   check_mode: false
+#   changed_when: false
+#   tags:
+#     - mas
+
+- name: Install MAS applications
+  community.general.mas:
+    id: "{{ item.id }}"
+    state: present
+  with_items:
+    - "{{ mas_apps }}"
