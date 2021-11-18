@@ -9,25 +9,29 @@
         - "{{ playbook_dir }}/vars/config.yml"
       tags:
         - always
-
   tasks:
-    - import_tasks: tasks/homebrew.yml
+    - ansible.builtin.import_tasks: 
+        files: tasks/homebrew.yml
       when: configure_homebrew
       tags:
         - homebrew
-    - import_tasks: tasks/mas.yml
+    - ansible.builtin.import_tasks: 
+        file: tasks/mas.yml
       when: configure_mas
       tags:
         - mas
-    - import_tasks: tasks/terminal.yml
+    - ansible.builtin.import_tasks:
+        files: tasks/terminal.yml
       when: configure_terminal
       tags:
         - terminal
-    - import_tasks: tasks/macos.yml
+    - ansible.builtin.import_tasks:
+        files: tasks/macos.yml
       when: configure_macos
       tags:
         - macos
-    - import_tasks: tasks/vscode.yml
+    - ansible.builtin.import_tasks:
+        files: tasks/vscode.yml
       when: configure_vscode
       tags:
         - vscode
